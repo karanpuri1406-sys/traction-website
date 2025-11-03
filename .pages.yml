@@ -1,14 +1,214 @@
-# pages-cms.yml (simple config)
-backend:
-  type: github
-  repo: karanpuri1406-sys/traction-website
-  branch: main
+# PagesCMS Configuration for Traction AI SEO Website
+# This file enables visual editing of your website content through PagesCMS
 
+# GitHub Repository Configuration
+repository: karanpuri1406-sys/traction-website
+branch: main
+
+# Media/Images Configuration
+media:
+  input: images
+  output: images
+
+# Content Collections - Define what content you can edit
 collections:
+  # Hero Section (Homepage Main Banner)
+  - name: hero
+    label: Hero Section
+    description: Edit the main homepage banner section
+    type: single
+    file: content/hero.json
+    fields:
+      - name: title
+        label: Main Title
+        type: string
+        required: true
+        description: The main headline on your homepage
+      - name: subtitle
+        label: Subtitle
+        type: text
+        required: true
+        description: The description text below the main title
+      - name: cta_text
+        label: Button Text
+        type: string
+        required: true
+        description: Text for the main call-to-action button
+      - name: stats
+        label: Statistics
+        type: list
+        description: The 3 statistics displayed on the homepage
+        fields:
+          - name: number
+            label: Number
+            type: string
+            required: true
+          - name: label
+            label: Label
+            type: string
+            required: true
+
+  # Services Section
+  - name: services
+    label: Services
+    description: Edit your service offerings
+    type: single
+    file: content/services.json
+    fields:
+      - name: ai_seo
+        label: AI SEO Service
+        type: object
+        fields:
+          - name: title
+            label: Service Title
+            type: string
+            required: true
+          - name: description
+            label: Description
+            type: text
+            required: true
+          - name: features
+            label: Features List
+            type: list
+            items: string
+      - name: lead_gen
+        label: Lead Generation Service
+        type: object
+        fields:
+          - name: title
+            label: Service Title
+            type: string
+            required: true
+          - name: description
+            label: Description
+            type: text
+            required: true
+          - name: features
+            label: Features List
+            type: list
+            items: string
+
+  # Pricing Plans
+  - name: pricing
+    label: Pricing Plans
+    description: Edit your pricing tiers
+    type: single
+    file: content/pricing.json
+    fields:
+      - name: plans
+        label: Pricing Plans
+        type: list
+        description: Your service pricing tiers
+        fields:
+          - name: name
+            label: Plan Name
+            type: string
+            required: true
+          - name: price
+            label: Price
+            type: string
+            required: true
+          - name: period
+            label: Billing Period
+            type: string
+          - name: description
+            label: Description
+            type: text
+          - name: features
+            label: Features List
+            type: list
+            items: string
+          - name: cta_text
+            label: Button Text
+            type: string
+          - name: popular
+            label: Popular Badge
+            type: boolean
+            default: false
+
+  # Contact Information
+  - name: contact
+    label: Contact Info
+    description: Edit contact details
+    type: single
+    file: content/contact.json
+    fields:
+      - name: email
+        label: Email Address
+        type: string
+        required: true
+      - name: phone
+        label: Phone Number
+        type: string
+      - name: hours
+        label: Business Hours
+        type: string
+        description: e.g., "Mon-Fri 9AM - 6PM EST"
+      - name: address
+        label: Physical Address
+        type: text
+        description: Optional street address
+
+  # Blog Posts
   - name: blog
     label: Blog Posts
+    description: Create and edit blog articles
+    type: collection
     path: content/blog
+    format: md
     fields:
-      - { name: title, label: Title, type: string }
-      - { name: body, label: Content, type: rich-text }
-      # ... more fields
+      - name: title
+        label: Post Title
+        type: string
+        required: true
+        description: The title of your blog post
+      - name: date
+        label: Publication Date
+        type: datetime
+        required: true
+        description: When this post was published
+      - name: author
+        label: Author Name
+        type: string
+        required: true
+      - name: author_title
+        label: Author Title
+        type: string
+        description: Job title or role (e.g., "Head of SEO Strategy")
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          - label: AI SEO
+            value: ai-seo
+          - label: Lead Generation
+            value: lead-generation
+          - label: Content Marketing
+            value: content-marketing
+          - label: Technical SEO
+            value: technical-seo
+          - label: Case Studies
+            value: case-studies
+      - name: excerpt
+        label: Excerpt
+        type: text
+        required: true
+        description: Short summary for blog listing pages
+      - name: featured
+        label: Featured Post
+        type: boolean
+        default: false
+        description: Show this post as featured on the blog page
+      - name: body
+        label: Content
+        type: rich-text
+        required: true
+        description: The main blog post content
+
+# UI Configuration
+ui:
+  name: Traction AI SEO
+  description: Content Management System
+  logo: /images/logo.png
+  primaryColor: "#6366f1"
