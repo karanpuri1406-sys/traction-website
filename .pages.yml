@@ -1,4 +1,4 @@
-# pages-cms.yml (simple config)
+
 backend:
   type: github
   repo: karanpuri1406-sys/traction-website
