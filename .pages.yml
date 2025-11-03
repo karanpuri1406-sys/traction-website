@@ -1,0 +1,14 @@
+# pages-cms.yml (simple config)
+backend:
+  type: github
+  repo: karanpuri1406-sys/traction-website
+  branch: main
+
+collections:
+  - name: blog
+    label: Blog Posts
+    path: content/blog
+    fields:
+      - { name: title, label: Title, type: string }
+      - { name: body, label: Content, type: rich-text }
+      # ... more fields
