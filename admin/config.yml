@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: karanpuri1406-sys/traction-website
   branch: main
 
 media_folder: "images/uploads"
