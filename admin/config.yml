@@ -2,6 +2,8 @@ backend:
   name: github
   repo: karanpuri1406-sys/traction-website
   branch: main
+  base_url: https://traction-ai-seo.pages.dev
+  auth_endpoint: api/auth
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
