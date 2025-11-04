@@ -610,7 +610,12 @@
                 </div>
 
                 <div class="contact-form-wrapper glass-card">
-                    <form class="contact-form" id="contactForm" action="https://formsubmit.co/karanpuri1406@gmail.com" method="POST">
+                <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="89b8c5d4-3f2a-4e7b-9d1c-6a8e2f4b7c9d">
+    <input type="hidden" name="subject" value="New Contact Form - Traction AI SEO">
+    <input type="hidden" name="redirect" value="https://traction-ai-seo.pages.dev/thank-you.html">
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
     <div class="form-group">
         <label for="name">Full Name *</label>
         <input type="text" id="name" name="name" required placeholder="John Smith">
@@ -641,12 +646,6 @@
         <label for="message">Tell Us About Your Goals *</label>
         <textarea id="message" name="message" rows="5" required placeholder="What are your main challenges and goals?"></textarea>
     </div>
-    
-    <!-- FormSubmit Configuration -->
-    <input type="hidden" name="_subject" value="New Contact Form Submission - Traction AI SEO">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="text" name="_honey" style="display:none">
     
     <button type="submit" class="btn btn-primary btn-block">
         <span>Send Message</span>
