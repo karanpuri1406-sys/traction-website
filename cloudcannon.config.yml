@@ -1,0 +1,58 @@
+# CloudCannon Configuration for Static Site
+source: .
+output: .
+
+# Collections for editing
+collections_config:
+  pages:
+    path: .
+    output: true
+    icon: wysiwyg
+    _enabled_editors:
+      - visual
+      - content
+      - source
+    filter:
+      base: strict
+      include:
+        - index.html
+        - blog.html
+        - blog-post.html
+
+  blog:
+    path: content/blog
+    output: true
+    icon: event
+    _enabled_editors:
+      - content
+      - data
+
+# Paths
+paths:
+  static: .
+  uploads: images
+  dam_uploads: images
+
+# Build settings
+build:
+  environment: {}
+  install_command: npm install
+  build_command: npm run build
+  output_dir: .
+  preserve_paths:
+    - images
+    - css
+    - js
+    - content
+
+# Editor settings  
+_editor:
+  default_path: /index.html
+
+_inputs:
+  title:
+    type: text
+  content:
+    type: markdown
+  date:
+    type: datetime

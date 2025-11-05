@@ -1,17 +1,18 @@
 {
   "name": "traction-website",
   "version": "1.0.0",
-  "description": "AI-Powered SEO & Lead Generation Website with Tina CMS",
+  "description": "AI-Powered SEO & Lead Generation Website",
+  "main": "index.html",
   "scripts": {
-    "dev": "tinacms dev -c \"npx serve .\"",
-    "build": "tinacms build",
-    "tinacms": "tinacms"
+    "build": "cp -r . ../output 2>/dev/null || xcopy /E /I /Y . ..\\output || true",
+    "dev": "echo 'Static site ready for editing'"
   },
-  "dependencies": {
-    "tinacms": "^1.5.30",
-    "@tinacms/cli": "^1.5.39"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karanpuri1406-sys/traction-website.git"
   },
-  "devDependencies": {
-    "serve": "^14.2.1"
-  }
+  "keywords": ["static", "html", "seo", "ai"],
+  "author": "Karan Puri",
+  "license": "MIT",
+  "devDependencies": {}
 }

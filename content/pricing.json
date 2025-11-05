@@ -1,0 +1,53 @@
+{
+  "plans": [
+    {
+      "name": "Starter",
+      "price": "$395",
+      "description": "For small businesses ready to grow",
+      "features": [
+        "Keyword Research & Strategy",
+        "On-Page SEO Optimization",
+        "Technical SEO Audit",
+        "4 Optimized Blog Posts/Month",
+        "Monthly Performance Reports",
+        "Email Support"
+      ],
+      "featured": false,
+      "button_text": "Get Started"
+    },
+    {
+      "name": "Professional",
+      "price": "$900",
+      "description": "For businesses serious about growth",
+      "features": [
+        "Everything in Starter",
+        "Advanced Competitor Analysis",
+        "Link Building Campaign",
+        "8 Optimized Blog Posts/Month",
+        "Lead Magnet Creation",
+        "Conversion Rate Optimization",
+        "Bi-Weekly Strategy Calls",
+        "Priority Support"
+      ],
+      "featured": true,
+      "button_text": "Get Started"
+    },
+    {
+      "name": "Enterprise",
+      "price": "Custom",
+      "description": "For companies scaling rapidly",
+      "features": [
+        "Everything in Professional",
+        "Unlimited Content Creation",
+        "Multi-Site Management",
+        "Custom Integrations",
+        "Dedicated Account Manager",
+        "White-Label Options",
+        "24/7 Priority Support",
+        "Custom SLA"
+      ],
+      "featured": false,
+      "button_text": "Contact Sales"
+    }
+  ]
+}

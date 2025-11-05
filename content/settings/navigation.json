@@ -1,0 +1,29 @@
+{
+  "menu_items": [
+    {
+      "label": "Services",
+      "link": "#services",
+      "order": 1
+    },
+    {
+      "label": "How It Works",
+      "link": "#how-it-works",
+      "order": 2
+    },
+    {
+      "label": "Results",
+      "link": "#results",
+      "order": 3
+    },
+    {
+      "label": "Blog",
+      "link": "blog.html",
+      "order": 4
+    },
+    {
+      "label": "Pricing",
+      "link": "#pricing",
+      "order": 5
+    }
+  ]
+}
