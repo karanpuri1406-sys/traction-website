@@ -1,0 +1,22 @@
+{
+  "ai_seo": {
+    "title": "AI SEO",
+    "description": "Leverage cutting-edge artificial intelligence to optimize your website, outrank competitors, and dominate search results. Our AI analyzes millions of data points to create winning strategies.",
+    "features": [
+      "AI-Powered Keyword Research",
+      "Intelligent Content Optimization",
+      "Predictive SEO Analytics",
+      "Automated Technical Audits"
+    ]
+  },
+  "lead_gen": {
+    "title": "Organic Lead Generation",
+    "description": "Build a sustainable pipeline of high-quality leads without paid ads. Our proven methodology attracts, engages, and converts your ideal customers through organic channels.",
+    "features": [
+      "Conversion-Optimized Content",
+      "Lead Magnet Creation",
+      "Marketing Funnel Development",
+      "CRM Integration & Automation"
+    ]
+  }
+}

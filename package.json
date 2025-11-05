@@ -1,15 +1,10 @@
 {
   "name": "traction-website",
   "version": "1.0.0",
-  "description": "AI-Powered SEO & Lead Generation Website with Tina CMS",
+  "description": "AI-Powered SEO & Lead Generation Website with Decap CMS",
   "scripts": {
-    "dev": "tinacms dev -c \"npx serve .\"",
-    "build": "tinacms build",
-    "tinacms": "tinacms"
-  },
-  "dependencies": {
-    "tinacms": "^1.5.30",
-    "@tinacms/cli": "^1.5.39"
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'"
   },
   "devDependencies": {
     "serve": "^14.2.1"

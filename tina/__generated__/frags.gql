@@ -1,0 +1,61 @@
+fragment HeroParts on Hero {
+  __typename
+  title
+  subtitle
+  cta_text
+  stats {
+    __typename
+    number
+    label
+  }
+}
+
+fragment ServicesParts on Services {
+  __typename
+  ai_seo {
+    __typename
+    title
+    description
+    features
+  }
+  lead_gen {
+    __typename
+    title
+    description
+    features
+  }
+}
+
+fragment PricingParts on Pricing {
+  __typename
+  plans {
+    __typename
+    name
+    price
+    description
+    features
+    featured
+    button_text
+  }
+}
+
+fragment ContactParts on Contact {
+  __typename
+  email
+  phone
+  hours
+  address
+}
+
+fragment BlogParts on Blog {
+  __typename
+  title
+  date
+  author
+  author_title
+  category
+  excerpt
+  featured_image
+  body
+  featured
+}
