@@ -1,57 +1,58 @@
-_schema: _schema
-paths:
-  uploads: static/uploads
-  static: static
+# CloudCannon Configuration for Static Site
+source: .
+output: .
+
+# Collections for editing
 collections_config:
   pages:
-    path: ''
-    name: Pages
+    path: .
+    output: true
     icon: wysiwyg
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
+    _enabled_editors:
+      - visual
+      - content
+      - source
+    filter:
+      base: strict
+      include:
+        - index.html
+        - blog.html
+        - blog-post.html
+
   blog:
-    path: Blog
-    name: Blog
-    icon: event_available
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
+    path: content/blog
+    output: true
+    icon: event
+    _enabled_editors:
+      - content
+      - data
+
+# Paths
+paths:
+  static: .
+  uploads: images
+  dam_uploads: images
+
+# Build settings
+build:
+  environment: {}
+  install_command: npm install
+  build_command: npm run build
+  output_dir: .
+  preserve_paths:
+    - images
+    - css
+    - js
+    - content
+
+# Editor settings  
+_editor:
+  default_path: /index.html
+
+_inputs:
+  title:
+    type: text
   content:
-    path: content
-    name: Content
-    icon: wysiwyg
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-  tina_generated:
-    path: tina/__generated__
-    name: Tina Generated
-    icon: ink_eraser
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-_snippets_imports:
-  hugo:
-    exclude:
-      - hugo_instagram
-timezone: Asia/Calcutta
-markdown:
-  engine: commonmark
-  options:
-    xhtml: false
-    breaks: false
-    linkify: false
-    typographer: false
-    spaced_lists: false
-    sentence_per_line: false
-    gfm: true
-    code_block_fences: '```'
-    escape_snippets_in_code_blocks: false
-    treat_indentation_as_code: true
-    table: false
-    strikethrough: false
-    subscript: false
-    superscript: false
-    heading_ids: false
-    attributes: false
+    type: markdown
+  date:
+    type: datetime
