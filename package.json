@@ -1,12 +1,18 @@
 {
   "name": "traction-website",
   "version": "1.0.0",
-  "description": "AI-Powered SEO & Lead Generation Website with Decap CMS",
+  "description": "AI-Powered SEO & Lead Generation Website",
+  "main": "index.html",
   "scripts": {
-    "dev": "npx serve .",
-    "build": "echo 'Static site - no build needed'"
+    "build": "cp -r . ../output 2>/dev/null || xcopy /E /I /Y . ..\\output || true",
+    "dev": "echo 'Static site ready for editing'"
   },
-  "devDependencies": {
-    "serve": "^14.2.1"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karanpuri1406-sys/traction-website.git"
+  },
+  "keywords": ["static", "html", "seo", "ai"],
+  "author": "Karan Puri",
+  "license": "MIT",
+  "devDependencies": {}
 }
